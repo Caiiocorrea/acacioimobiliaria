@@ -1,0 +1,7 @@
+/**/.env
+/**/node_modules
+/**/logs
+/**/coverage
+/**/pdf
+/**/.vscode
+sqltools*
