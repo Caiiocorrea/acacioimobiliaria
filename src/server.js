@@ -1,5 +1,4 @@
 'use strict';
-const cool = require('cool-ascii-faces');
 const express = require('express');
 const bodyParser = require('body-parser');
 const Routes = require('./routes/Routes')
