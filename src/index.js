@@ -3,5 +3,5 @@ const app = require('./server');
 
 
 app.listen(process.env.PORT || 7000, () => {
-  console.log('Hauszapi executando em ' + 'http://localhost' + process.env.PORT || 7000)
+  // console.log('Hauszapi executando em ' + 'http://localhost' + process.env.PORT || 7000)
 });
