@@ -1,7 +1,7 @@
 const app = require('./server');
-const config = require('./config');
+// const config = require('./config');
 
 
-app.listen(config.port, () => {
-  console.log('Hauszapi executando em ' + config.url + config.port)
+app.listen(7000, () => {
+  console.log('Hauszapi executando em ' + 'http://localhost' + 7000)
 });
