@@ -1,4 +1,5 @@
 'use strict';
+const cool = require('cool-ascii-faces');
 const express = require('express');
 const bodyParser = require('body-parser');
 const Routes = require('./routes/Routes')
@@ -28,6 +29,6 @@ app.use(bodyParser.json()); // json de entrada no body
 
 app.set('view engine', 'ejs')
 app.use(express.static("public"));
-app.use('/api/v1', Routes.routes);
+app.use(Routes.routes);
 
 module.exports = app

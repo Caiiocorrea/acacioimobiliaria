@@ -1,32 +1,31 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-let notafiscal = Schema({
-    name: {
+let boleto = new Schema({
+    Nr_Contrato: {
         type: String,
         required: true
     },
-    unidade: {
-        type: Number,
-        required: true
-    },
-    path: {
+    Nr_Documento: {
         type: String,
         required: true
     },
-    status: {
-        type: Boolean,
-        required: true
-    },
-    auth: {
+    Valor: {
         type: String,
         required: true
     },
-    json: {
+    Vencimento: {
         type: String,
-        require: true
+        required: true
+    },
+    Linha_Digitavel: {
+        type: String,
+        required: true
+    },
+    Download: {
+        type: String,
+        required: true
     }
 })
 
-
-module.exports = mongoose.model("notasfiscais", notafiscal);
+module.exports = mongoose.model("boletos", boleto);

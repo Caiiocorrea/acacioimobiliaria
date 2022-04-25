@@ -17,22 +17,22 @@ exports.Logger = async (req, res, next) => {
 
         next()
 
-        // const metodo = ['PUT', 'DELETE', 'POST', 'GET'];
-        // if ((metodo.includes(method))) {
-        //     data = {
-        //         user,
-        //         event: method === 'POST' ? 'Cadastrar' : method === 'PUT' ? 'Editar' : 'Deletar',
-        //         dados: params !== '{}' ? params : query !== '{}' ? query : body,
-        //         path
-        //     }
+        const metodo = ['PUT', 'DELETE', 'POST', 'GET'];
+        if ((metodo.includes(method))) {
+            data = {
+                user,
+                event: method === 'POST' ? 'Cadastrar' : method === 'PUT' ? 'Editar' : 'Deletar',
+                dados: params !== '{}' ? params : query !== '{}' ? query : body,
+                path
+            }
 
-        //     // const result = await logsdata.postlogs(data)
-        //     console.log(result)
-        //     next();
-        // }
-        // else {
-        //     next();
-        // }
+            // const result = await logsdata.postlogs(data)
+            console.log(result)
+            next();
+        }
+        else {
+            next();
+        }
 
     } catch (error) {
         res.status(500).send({ message: error.message })
