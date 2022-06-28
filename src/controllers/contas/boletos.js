@@ -1,8 +1,38 @@
 'use strict';
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const puppeteer = require('puppeteer');
 const boleto = require('../../models/boletos.js');
+const xhr = new XMLHttpRequest();
 const http = require('http');
 const fs = require('fs');
+
+const GetBoleto = async (req, res) => {
+    try {
+        const boleto = req.query.boleto;
+
+        fs.readFile(boleto, 'base64', async (err, data) => {
+            if (err)
+                throw err;
+
+            xhr.open('POST', data, false);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.send();
+
+            // res.contentType("application/pdf");
+            // res.send({data});
+            // xhr.open('POST', data, false);
+            // xhr.send(blob);
+
+            // req.on('readable', () => {
+            //     req.read(data)
+            // })
+        });
+
+    } catch (error) {
+        console.log(error);
+    }
+
+}
 
 const GetBoletos = async (req, res) => {
     try {
@@ -275,5 +305,6 @@ const GetBoletos = async (req, res) => {
 }
 
 module.exports = {
+    GetBoleto,
     GetBoletos
 }

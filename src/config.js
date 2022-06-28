@@ -102,5 +102,6 @@ module.exports = {
     secure: MULTER_SECURE,
     user: MULTER_USER,
     password: MULTER_PASSWORD
-    }
+    },
+    MONGODB_URI: MONGODB_URI,
 };

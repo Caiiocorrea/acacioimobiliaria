@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const AutoIncrementFactory = require('mongoose-sequence');
+const config = require('./config')
 
-const uri =  "mongodb://admin:n3v3rch%40ngedLX@201.16.140.153:27017/acacio?authSource=admin&readPreference=secondary&appname=MongoDB%20Compass&ssl=false";
+const uri =  config.MONGODB_URI;
 
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
 const connection = mongoose.connection;

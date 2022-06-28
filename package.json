@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "mssql": "^6.3.2",
     "npm": "^8.7.0",
     "puppeteer": "^13.6.0",
+    "xmlhttprequest": "^1.8.0",
     "yarn": "^1.22.11"
   },
   "devDependencies": {

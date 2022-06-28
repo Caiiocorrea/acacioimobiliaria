@@ -12,6 +12,7 @@ router.get('/', (req, res) => { res.status(200).send({ message: 'acacio-api exec
 
 //CONTAS
 const boletos = require('../controllers/contas/boletos');
+router.get('/boleto', boletos.GetBoleto);
 router.post('/boletos', boletos.GetBoletos);
 
 module.exports = {

@@ -1,0 +1,68 @@
+Arguments: 
+  /home/caiocorrea/.nvm/versions/node/v16.13.0/bin/node /home/caiocorrea/.nvm/versions/node/v16.13.0/bin/yarn add XMLHttpRequest
+
+PATH: 
+  /home/caiocorrea/.nvm/versions/node/v16.13.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/home/caiocorrea/Android/Sdk/tools:/home/caiocorrea/Android/Sdk/platform-tools:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/home/caiocorrea/Android/Sdk/tools:/home/caiocorrea/Android/Sdk/platform-tools:/opt/mssql-tools/bin:/opt/mssql-tools/bin:/home/caiocorrea/Android/Sdk/tools:/home/caiocorrea/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/XMLHttpRequest: Not found
+      at Request.params.callback [as _callback] (/home/caiocorrea/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/home/caiocorrea/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (/home/caiocorrea/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (/home/caiocorrea/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "acacioimobiliaria",
+    "bin": "index.js",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node src/index.js",
+      "start:dev": "nodemon src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@sendgrid/mail": "^7.6.0",
+      "axios": "^0.21.1",
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^6.2.10",
+      "mongoose-sequence": "^5.3.1",
+      "morgan": "^1.10.0",
+      "mssql": "^6.3.2",
+      "npm": "^8.7.0",
+      "puppeteer": "^13.6.0",
+      "yarn": "^1.22.11"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
